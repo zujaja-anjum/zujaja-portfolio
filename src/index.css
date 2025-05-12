@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-light;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary rounded-full;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply hover:text-secondary transition-colors duration-300;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 border-2 border-secondary text-secondary rounded hover:bg-secondary/10 transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold mb-8 text-light;
+  }
+
+  .skill-item {
+    @apply flex items-center gap-2 bg-dark/50 p-4 rounded-lg hover:bg-dark transition-colors duration-300;
+  }
+}
