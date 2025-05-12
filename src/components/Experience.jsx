@@ -41,7 +41,7 @@ function Experience() {
                 <motion.a
                   href={exp.letterPath}
                   download
-                  className="flex items-center gap-2 btn-primary"
+                  className="btn-primary inline-flex items-center gap-2 text-sm sm:text-base w-full sm:w-auto justify-center mt-4 sm:mt-0"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

@@ -42,7 +42,7 @@ function About() {
         <motion.a
           href="/Resume.pdf"
           download
-          className="btn-primary inline-flex items-center gap-2"
+          className="btn-primary inline-flex items-center gap-2 text-sm sm:text-base w-full sm:w-auto justify-center"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
