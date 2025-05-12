@@ -1,10 +1,26 @@
 {
   "routes": [
     {
+      "src": "/Resume.pdf",
+      "dest": "/Resume.pdf"
+    },
+    {
+      "src": "/project_1.png",
+      "dest": "/project_1.png"
+    },
+    {
+      "src": "/project_2.png",
+      "dest": "/project_2.png"
+    },
+    {
+      "src": "/project_3.jpg",
+      "dest": "/project_3.jpg"
+    },
+    {
       "handle": "filesystem"
     },
     {
-      "src": "/.*",
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
