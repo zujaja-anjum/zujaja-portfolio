@@ -32,10 +32,10 @@ function About() {
       >
         <div className="prose prose-invert max-w-none">
           <p className="text-tertiary mb-4">
-          Hi, I'm Taha Iqbal, a passionate and detail-oriented software developer currently pursuing a Bachelor's degree in Geographic Information Systems (GIS) at Punjab University College of Information Technology. With a strong foundation in programming and problem-solving, I specialize in full-stack web development and have hands-on experience with Python, JavaScript, C/C++, and Java.
+          Hi, I'm Zujaja Anjum, a dedicated SEO executive and WordPress web developer currently pursuing a Bachelor's degree in Geographic Information Systems (GIS) at Punjab University College of Information Technology. I have a strong foundation in search engine optimization, digital marketing, and WordPress site development, with hands-on experience in backlink creation, content optimization, and site authority growth.
           </p>
           <p className="text-tertiary mb-8">
-          Beyond the code, I pride myself on being a collaborative team player with excellent communication skills. I'm always eager to learn, grow, and contribute to meaningful tech solutions that make a difference.
+          I excel at blending technical SEO strategies with creative digital solutions, helping businesses improve their online visibility and reach. Beyond my technical skills, I pride myself on effective communication, attention to detail, and a deep commitment to continuous learning and growth in the digital space.
           </p>
         </div>
 

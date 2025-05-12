@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { FiSun, FiMoon } from 'react-icons/fi'
 
-function Navbar({ darkMode, setDarkMode }) {
+function Navbar() {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
@@ -42,19 +42,7 @@ function Navbar({ darkMode, setDarkMode }) {
             ))}
           </ul>
 
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-full hover:bg-secondary/10 transition-colors duration-300"
-            aria-label="Toggle theme"
-          >
-            {darkMode ? (
-              <FiSun className="w-6 h-6 text-secondary" />
-            ) : (
-              <FiMoon className="w-6 h-6 text-secondary" />
-            )}
-          </motion.button>
+
         </div>
       </div>
     </motion.nav>

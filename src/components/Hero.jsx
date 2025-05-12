@@ -3,9 +3,9 @@ import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 
 function Hero() {
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/laxus51', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://linkedin.com/in/muhammad-taha-iqbal', label: 'LinkedIn' },
-    { icon: FiMail, href: 'mailto:muhammadtaha45@gmail.com', label: 'Email' },
+    { icon: FiGithub, href: 'https://github.com/zujaja-anjum', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/zujaja-anjum-7b019925a/', label: 'LinkedIn' },
+    { icon: FiMail, href: 'mailto:zujajaanjum42@gmail.com', label: 'Email' },
   ]
 
   return (
@@ -26,7 +26,7 @@ function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-5xl md:text-7xl font-bold mb-4"
         >
-          Taha Iqbal
+          Zujaja Anjum
         </motion.h1>
 
         <motion.h2
@@ -35,7 +35,7 @@ function Hero() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-3xl md:text-5xl font-bold text-tertiary mb-8"
         >
-          Frontend Developer
+          SEO Expert & Wordpress Developer 
         </motion.h2>
 
         <motion.p
@@ -44,7 +44,7 @@ function Hero() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="text-tertiary max-w-2xl mx-auto mb-12"
         >
-          I build exceptional and accessible digital experiences for the web.
+          Building SEO-optimized WordPress websites that drive traffic and deliver engaging digital experiences.
         </motion.p>
 
         <motion.div

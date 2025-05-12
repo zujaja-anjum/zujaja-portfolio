@@ -1,33 +1,29 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import { FiExternalLink } from 'react-icons/fi'
 
 const projects = [
   {
-    title: 'NavU',
-    description: 'A Python-based navigation tool that uses Dijkstra’s algorithm for room-to-room pathfinding, visualized with Matplotlib and powered by NetworkX and NumPy.',
-    image: '/project_1.png',
-    technologies: ['Python', 'Networkx', 'Numpy', 'Matplotlib'],
-    github: 'https://github.com/yourusername/project1',
-    live: 'https://project1.example.com',
+    title: 'The Joint Chiropractic — Backlink creation ',
+    description: 'Developed high-authority profiles, conducted keyword research for organic ranking, and created strategic backlinks to improve domain authority and search visibility.',
+    image: '/project_1.jpg',
+    technologies: ['google search consol' , 'Ahrefs', 'Moz link explorer'],
+    live: 'https://project1.example.com'
   },
   {
-    title: 'Forkast',
-    description: 'A responsive web app built with vanilla JavaScript and the Spoonacular API, enabling users to browse recipes and create custom weekly meal plans stored locally.',
+    title: 'Oudguru — E-commerce Website',
+    description: 'Built a WordPress-based e-commerce platform with integrated SEO, optimized for search visibility and user engagement',
     image: '/project_2.png',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Spoonacular API'],
-    github: 'https://github.com/yourusername/project2',
-    live: 'https://project2.example.com',
+    technologies: ['Wordpress', 'WooCommerce', 'AIOSEO'],
+    live: 'https://oudguru.com/'
   },
   {
-    title: 'Flashify',
-    description: 'A full-stack flashcard application developed with React, Node.js, and MongoDB, featuring secure user authentication via JWT and a clean RESTful API structure.',
-    image: '/project_3.jpg',
-    technologies: ['React', 'Node.js', 'JWT', 'MongoDB'],
-    github: 'https://github.com/yourusername/project3',
-    live: 'https://project3.example.com',
+    title: 'Microsoft/Amazon Exam Dumps',
+    description: 'Created comprehensive, up-to-date exam dumps for popular certifications like Microsoft Dynamics 365, covering real-world scenarios and practice questions for effective exam preparation.',
+    image: '/project_3.png',
+    technologies: ['Microsoft Word', 'pdf reader', 'websites and forums'],
+    live: 'https://project3.example.com'
   },
 ]
 
@@ -64,28 +60,20 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
 
-        <div className="flex gap-4">
-          <motion.a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-tertiary hover:text-secondary transition-colors duration-300"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FiGithub className="w-6 h-6" />
-          </motion.a>
-          <motion.a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-tertiary hover:text-secondary transition-colors duration-300"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FiExternalLink className="w-6 h-6" />
-          </motion.a>
-        </div>
+        {index === 1 && (
+          <div className="flex gap-4">
+            <motion.a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-tertiary hover:text-secondary transition-colors duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FiExternalLink className="w-6 h-6" />
+            </motion.a>
+          </div>
+        )}
       </div>
     </motion.div>
   )

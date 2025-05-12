@@ -1,20 +1,18 @@
-import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import ThreeBackground from './components/ThreeBackground'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true)
-
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-primary' : 'bg-light'}`}>
+    <div className="min-h-screen bg-primary">
       <ThreeBackground />
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Navbar />
       <main className="container mx-auto px-4 relative z-10">
         <AnimatePresence mode="wait">
           <motion.div
@@ -25,6 +23,7 @@ function App() {
           >
             <Hero />
             <About />
+            <Experience />
             <Projects />
             <Skills />
             <Contact />

@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { FiGithub, FiLinkedin, FiMail, FiSend } from 'react-icons/fi'
+import emailjs from '@emailjs/browser'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -8,14 +9,32 @@ function Contact() {
     email: '',
     message: '',
   })
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState(false)
+  const form = useRef()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // Here you can integrate with EmailJS or Formspree
-    // For now, we'll just log the form data
-    console.log('Form submitted:', formData)
-    // Reset form
-    setFormData({ name: '', email: '', message: '' })
+    setLoading(true)
+    setError('')
+    setSuccess(false)
+
+    try {
+      await emailjs.sendForm(
+        'service_n69h36b',
+        'template_1gp1kwd',
+        form.current,
+        'NdLkSaPBsd0lDt2YN'
+      )
+      setSuccess(true)
+      setFormData({ name: '', email: '', message: '' })
+    } catch (error) {
+      setError('Failed to send message. Please try again later.')
+      console.error('EmailJS Error:', error)
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -24,9 +43,9 @@ function Contact() {
   }
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/laxus51', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://linkedin.com/in/muhammad-taha-iqbal', label: 'LinkedIn' },
-    { icon: FiMail, href: 'mailto:muhammadtaha45@gmail.com', label: 'Email' },
+    { icon: FiGithub, href: 'https://github.com/zujaja-anjum', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/zujaja-anjum-7b019925a/', label: 'LinkedIn' },
+    { icon: FiMail, href: 'mailto:zujajaanjum42@gmail.com', label: 'Email' },
   ]
 
   return (
@@ -77,7 +96,7 @@ function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form ref={form} onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Name
@@ -123,14 +142,21 @@ function Contact() {
               />
             </div>
 
+            {error && (
+              <p className="text-red-500 text-sm">{error}</p>
+            )}
+            {success && (
+              <p className="text-green-500 text-sm">Message sent successfully!</p>
+            )}
             <motion.button
               type="submit"
-              className="btn-primary w-full flex items-center justify-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              disabled={loading}
+              className={`btn-primary w-full flex items-center justify-center gap-2 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+              whileHover={{ scale: loading ? 1 : 1.05 }}
+              whileTap={{ scale: loading ? 1 : 0.95 }}
             >
               <FiSend className="w-5 h-5" />
-              Send Message
+              {loading ? 'Sending...' : 'Send Message'}
             </motion.button>
           </form>
         </motion.div>
