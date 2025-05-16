@@ -31,8 +31,8 @@ function Experience() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="bg-primary/50 backdrop-blur-sm rounded-lg p-6 mb-8 border border-secondary/20"
             >
-              <div className="flex justify-between items-start mb-4">
-                <div>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-6">
+                <div className="mb-4 sm:mb-0">
                   <h3 className="text-2xl font-bold text-secondary">{exp.company}</h3>
                   <p className="text-xl text-tertiary">{exp.role}</p>
                   <p className="text-tertiary/80">{exp.duration}</p>
@@ -41,7 +41,7 @@ function Experience() {
                 <motion.a
                   href={exp.letterPath}
                   download
-                  className="btn-primary inline-flex items-center gap-1 text-xs sm:text-sm justify-center mt-2 sm:mt-0 ml-auto px-3 py-1.5"
+                  className="btn-primary inline-flex items-center gap-1 text-xs sm:text-sm justify-center w-full sm:w-auto sm:ml-auto px-3 py-1.5"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
